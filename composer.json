@@ -1,0 +1,18 @@
+{
+    "name": "rdg/exposition-rdg",
+    "description": "Art Gallery",
+    "type": "typo3-cms-extension",
+	"version": "0.1",
+    "require": {
+		"typo3/cms-core": "^8.7"
+	},
+	"replace": {
+      "exposition_rdg": "self.version",
+      "rdg/exposition-rdg": "self.version"
+    },
+	"autoload": {
+		"psr-4": {
+		  "RDG\\ExpositionRdg\\": "Classes/"
+		}
+	}
+}
