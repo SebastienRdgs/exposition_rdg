@@ -57,11 +57,11 @@ overwriteSettings:
 
   ext_icon.gif: keep
 
-#  ext_localconf.php: merge
+  ext_localconf.php: merge
 
-#  ext_tables.php: merge
+  ext_tables.php: merge
 
-#  ext_tables.sql: merge
+  ext_tables.sql: merge
 
 ## use static date attribute in xliff files ##
 #staticDateInXliffFiles: 2018-06-07T09:09:00Z

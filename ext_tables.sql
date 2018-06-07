@@ -264,3 +264,5 @@ CREATE TABLE tx_expositionrdg_domain_model_oeuvres (
 	artiste int(11) unsigned DEFAULT '0' NOT NULL,
 
 );
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder

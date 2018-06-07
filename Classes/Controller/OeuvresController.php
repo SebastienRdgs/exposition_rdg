@@ -21,6 +21,14 @@ namespace RDG\ExpositionRdg\Controller;
 class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * oeuvresRepository
+     * 
+     * @var \RDG\ExpositionRdg\Domain\Repository\OeuvresRepository
+     * @inject
+     */
+    protected $oeuvresRepository = null;
+
+    /**
      * action list
      * 
      * @return void

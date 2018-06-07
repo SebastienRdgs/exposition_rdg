@@ -40,7 +40,7 @@ class ArtisteControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $artisteRepository = $this->getMockBuilder(\::class)
+        $artisteRepository = $this->getMockBuilder(\RDG\ExpositionRdg\Domain\Repository\ArtisteRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();

@@ -21,6 +21,14 @@ namespace RDG\ExpositionRdg\Controller;
 class ArtisteController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * artisteRepository
+     * 
+     * @var \RDG\ExpositionRdg\Domain\Repository\ArtisteRepository
+     * @inject
+     */
+    protected $artisteRepository = null;
+
+    /**
      * action list
      * 
      * @return void

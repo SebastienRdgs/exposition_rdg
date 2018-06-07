@@ -40,7 +40,7 @@ class OeuvresControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $oeuvresRepository = $this->getMockBuilder(\::class)
+        $oeuvresRepository = $this->getMockBuilder(\RDG\ExpositionRdg\Domain\Repository\OeuvresRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
