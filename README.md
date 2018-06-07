@@ -14,9 +14,3 @@ Contributors
 
 This Reame will be overwrite soon
 ----------
-
-
-See more
------
-
-Click [here](http://instantfap.com) to go somewhere.
