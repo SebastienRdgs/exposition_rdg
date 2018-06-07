@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:06Z" product-name="exposition_rdg">
+		<header/>
+		<body>
+			<trans-unit id="photo.description">
+				<source>La photo</source>
+			</trans-unit>
+			<trans-unit id="nom.description">
+				<source>Le nom</source>
+			</trans-unit>
+			<trans-unit id="biographie.description">
+				<source>biographie</source>
+			</trans-unit>
+			<trans-unit id="date_naissance.description">
+				<source>La date de naissance</source>
+			</trans-unit>
+			<trans-unit id="date_deces.description">
+				<source>La date de dèces</source>
+			</trans-unit>
+			<trans-unit id="influences.description">
+				<source>L'influence</source>
+			</trans-unit>
+			<trans-unit id="nationalite.description">
+				<source>Un artiste a une nationalite, une nationalite peut avoir plusieurs artistes</source>
+			</trans-unit>
+			<trans-unit id="oeuvres.description">
+				<source>Un artiste peut avoir plusieurs oeuvres</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

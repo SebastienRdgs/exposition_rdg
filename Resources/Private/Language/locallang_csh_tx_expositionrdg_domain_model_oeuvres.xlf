@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:06Z" product-name="exposition_rdg">
+		<header/>
+		<body>
+			<trans-unit id="intitule.description">
+				<source>L'intitulé</source>
+			</trans-unit>
+			<trans-unit id="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="dimensions.description">
+				<source>dimensions</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

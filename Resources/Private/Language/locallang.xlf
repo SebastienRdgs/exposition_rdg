@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:06Z" product-name="exposition_rdg">
+		<header/>
+		<body>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition">
+				<source>Exposition</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.nom">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.horaire">
+				<source>Horaire</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.visuel">
+				<source>Visuel</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.tarifs">
+				<source>Tarifs</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.datedeb">
+				<source>Datedeb</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.datefin">
+				<source>Datefin</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.lieu">
+				<source>Lieu</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_exposition.oeuvres">
+				<source>Oeuvres</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu">
+				<source>Lieu</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.nom">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.adresse">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.code_postal">
+				<source>Code Postal</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_lieu.accessiblepmr">
+				<source>Accessiblepmr</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_nationalite">
+				<source>Nationalite</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_nationalite.nom">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_nationalite.codeiso">
+				<source>Codeiso</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste">
+				<source>Artiste</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.photo">
+				<source>Photo</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.nom">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.biographie">
+				<source>Biographie</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.date_naissance">
+				<source>Date Naissance</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.date_deces">
+				<source>Date Deces</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.influences">
+				<source>Influences</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.nationalite">
+				<source>Nationalite</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_artiste.oeuvres">
+				<source>Oeuvres</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres">
+				<source>Oeuvres</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.intitule">
+				<source>Intitule</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.dimensions">
+				<source>Dimensions</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

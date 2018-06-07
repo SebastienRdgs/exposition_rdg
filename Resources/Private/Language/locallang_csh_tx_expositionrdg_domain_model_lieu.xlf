@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:06Z" product-name="exposition_rdg">
+		<header/>
+		<body>
+			<trans-unit id="nom.description">
+				<source>Le nom</source>
+			</trans-unit>
+			<trans-unit id="latitude.description">
+				<source>La latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude.description">
+				<source>La longitude</source>
+			</trans-unit>
+			<trans-unit id="adresse.description">
+				<source>L'adresse</source>
+			</trans-unit>
+			<trans-unit id="code_postal.description">
+				<source>Le code postal</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>La description</source>
+			</trans-unit>
+			<trans-unit id="accessiblepmr.description">
+				<source>L'accessibilité au personne a mobilité réduite</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

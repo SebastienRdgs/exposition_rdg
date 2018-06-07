@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:06Z" product-name="exposition_rdg">
+		<header/>
+		<body>
+			<trans-unit id="nom.description">
+				<source>Le nom</source>
+			</trans-unit>
+			<trans-unit id="horaire.description">
+				<source>L'horaire</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>La description</source>
+			</trans-unit>
+			<trans-unit id="visuel.description">
+				<source>Le visuel</source>
+			</trans-unit>
+			<trans-unit id="tarifs.description">
+				<source>Le tarif</source>
+			</trans-unit>
+			<trans-unit id="datedeb.description">
+				<source>La date de début</source>
+			</trans-unit>
+			<trans-unit id="datefin.description">
+				<source>La date de fin</source>
+			</trans-unit>
+			<trans-unit id="lieu.description">
+				<source>Une exposition a un lieu, un lieu peut avoir plusieurs expositions</source>
+			</trans-unit>
+			<trans-unit id="oeuvres.description">
+				<source>des oeuvres peut etre dans plusieurs expositions</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
