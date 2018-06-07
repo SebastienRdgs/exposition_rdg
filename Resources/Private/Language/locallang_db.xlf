@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T15:08:25Z" product-name="exposition_rdg">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T15:13:08Z" product-name="exposition_rdg">
 		<header/>
 		<body>
 			<trans-unit id="tx_exposition_rdg_domain_model_p1">
@@ -116,6 +116,9 @@
 			</trans-unit>
 			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.dimensions">
 				<source>Dimensions</source>
+			</trans-unit>
+			<trans-unit id="tx_expositionrdg_domain_model_oeuvres.image">
+				<source>Image</source>
 			</trans-unit>
 		</body>
 	</file>

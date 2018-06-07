@@ -24,6 +24,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.description" /></th>
 		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.type" /></th>
 		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.dimensions" /></th>
+		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.image" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -35,6 +36,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.description}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.type}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.dimensions}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.image.originalResource.name}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{oeuvres : oeuvres}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{oeuvres : oeuvres}">Delete</f:link.action></td>
 		</tr>

@@ -195,6 +195,7 @@ CREATE TABLE tx_expositionrdg_domain_model_oeuvres (
 	description text NOT NULL,
 	type int(11) DEFAULT '0' NOT NULL,
 	dimensions varchar(255) DEFAULT '' NOT NULL,
+	image int(11) unsigned NOT NULL default '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
