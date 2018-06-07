@@ -306,8 +306,8 @@
         {
             "config": {
                 "position": [
-                    315,
-                    207
+                    313,
+                    213
                 ]
             },
             "name": "New Model Object",
@@ -318,7 +318,9 @@
                     "_default2_new_create": false,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "search"
+                    ]
                 },
                 "name": "Artiste",
                 "objectsettings": {
@@ -536,8 +538,8 @@
         },
         "extensionKey": "exposition_rdg",
         "name": "exposition rdg",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "exposition_rdg",
+        "originalVendorName": "RDG",
         "persons": [
             {
                 "company": "LaTeam",
@@ -564,7 +566,17 @@
                 "role": "Developer"
             }
         ],
-        "plugins": [],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Artiste => list,show,search\nOeuvres => list,show,highlight\nExposition => list,show",
+                    "noncacheableActions": "Artiste => search",
+                    "switchableActions": "Agenda expositions\nExposition->list;Exposition->show;\nGalerie\nOeuvres->list;Oeuvres->show;\nMise en valeur\nOeuvres->highlight;\nListe des artistes\nArtiste->list;Artiste->show;Artiste->search;"
+                },
+                "key": "p1",
+                "name": "Expo rodrigues"
+            }
+        ],
         "vendorName": "RDG"
     },
     "wires": [
@@ -618,7 +630,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-06-07 10:14",
+        "last_modified": "2018-06-07 01:17",
         "extension_builder_version": "7.6.18",
         "be_user": " (1)"
     }

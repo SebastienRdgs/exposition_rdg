@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T10:14:06Z" product-name="exposition_rdg">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-07T13:17:11Z" product-name="exposition_rdg">
 		<header/>
 		<body>
+			<trans-unit id="tx_exposition_rdg_domain_model_p1">
+				<source>Expo rodrigues</source>
+			</trans-unit>
+			<trans-unit id="tx_exposition_rdg_domain_model_p1.description">
+				<source>L\'exposition.</source>
+			</trans-unit>
 			<trans-unit id="intitule.description">
 				<source>L'intitulé</source>
 			</trans-unit>

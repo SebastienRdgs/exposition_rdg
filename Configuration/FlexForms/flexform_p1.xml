@@ -1,0 +1,40 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Function</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Select function</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">Agenda expositions</numIndex>
+										<numIndex index="1">Exposition->list;Exposition->show</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">Galerie</numIndex>
+										<numIndex index="1">Oeuvres->list;Oeuvres->show</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Mise en valeur</numIndex>
+										<numIndex index="1">Oeuvres->highlight</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">Liste des artistes</numIndex>
+										<numIndex index="1">Artiste->list;Artiste->show;Artiste->search</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

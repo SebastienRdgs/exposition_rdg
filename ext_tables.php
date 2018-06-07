@@ -5,6 +5,16 @@ call_user_func(
     function($extKey)
     {
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'RDG.ExpositionRdg',
+            'P1',
+            'Expo rodrigues'
+        );
+
+        $pluginSignature = str_replace('_', '', $extKey) . '_p1';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $extKey . '/Configuration/FlexForms/flexform_p1.xml');
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'exposition rdg');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_expositionrdg_domain_model_exposition', 'EXT:exposition_rdg/Resources/Private/Language/locallang_csh_tx_expositionrdg_domain_model_exposition.xlf');

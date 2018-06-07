@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-exposition-rdg" >
+	<tr>
+		<td>
+			<f:translate key="tx_expositionrdg_domain_model_oeuvres.intitule" />
+		</td>
+		<td>
+		{oeuvres.intitule}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionrdg_domain_model_oeuvres.date" />
+		</td>
+		<td>
+		{oeuvres.date -> f:format.date()}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionrdg_domain_model_oeuvres.description" />
+		</td>
+		<td>
+		{oeuvres.description}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionrdg_domain_model_oeuvres.type" />
+		</td>
+		<td>
+		{oeuvres.type}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_expositionrdg_domain_model_oeuvres.dimensions" />
+		</td>
+		<td>
+		{oeuvres.dimensions}
+		</td>
+	</tr>
+</table>
+</html>

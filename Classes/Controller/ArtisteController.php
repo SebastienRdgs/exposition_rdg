@@ -41,4 +41,14 @@ class ArtisteController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     {
         $this->view->assign('artiste', $artiste);
     }
+
+    /**
+     * action search
+     * 
+     * @return void
+     */
+    public function searchAction()
+    {
+
+    }
 }
