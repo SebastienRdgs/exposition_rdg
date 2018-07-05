@@ -14,13 +14,11 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 <h1>Highlight Oeuvres</h1>
-
-<f:flashMessages />
 <div class="row">
 	<f:for each="{oeuvres}" as="oeuvre">
 		<div class="col-md-4">
       <div class="col-md-12">
-        <f:link.action action="show" arguments="{oeuvre : oeuvre}"> <f:image src="{oeuvre.image.originalResource.publicUrl}"/></f:link.action>
+        <f:link.action action="show" arguments="{oeuvres : oeuvre}" pageUid="{settings.detailPid}"> <f:image src="{oeuvre.image.originalResource.publicUrl}"/></f:link.action>
       </div>
 			<div class="col-md-12"><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.intitule}</f:link.action></div>
       <div class="col-md-12"><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.type}</f:link.action></div>
