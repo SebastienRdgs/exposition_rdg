@@ -23,14 +23,14 @@ class OeuvresRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
   public function findAll() {
     return $this->createQuery()->execute();
   }
-  public function findHighlight() {
+  public function findHighlight($limit = 3) {
     $query = $this->createQuery();
     $query->setOrderings(
         [
             'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
         ]
     );
-    $query->setLimit(3);
+    $query->setLimit($limit);
     return $query->execute();
   }
 }

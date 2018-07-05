@@ -57,7 +57,7 @@ class OeuvresController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function highlightAction()
     {
-      $oeuvres = $this->oeuvresRepository->findHighlight();
+      $oeuvres = $this->oeuvresRepository->findHighlight((int) ($this->settings['limitHighlight'] ?? 3));
       $this->view->assign('oeuvres', $oeuvres);
     }
 }
