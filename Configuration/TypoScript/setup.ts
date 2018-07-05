@@ -52,3 +52,7 @@ plugin.tx_expositionrdg._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+page.includeCSS {
+    exposition_rdg = EXT:exposition_rdg/Resources/Public/css/custom.css
+}
+plugin.tx_expositionrdg_p1.persistence.storagePid >

@@ -1,0 +1,74 @@
+// out: custom.css
+
+//vars
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600');
+@bg-color: #161616;
+@bg-lighter: #323232;
+
+@gold: #bb9b49;
+@white: #e7e7e7;
+
+//site style
+
+//custom style
+body {
+
+}
+//artist list
+.smae {
+
+}
+.custom-list {
+  font-family: "Rajdhani", sans-serif;
+  h1 {
+    margin-bottom: 45px;
+    color: @gold;
+    font-weight: 400;
+    position: relative;
+    &:after {
+      content: "";
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 1px;
+      background: @gold;
+    }
+  }
+  .custom-item {
+  margin-bottom: 20px;
+    .item-legend {
+      background: @bg-lighter;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      .item-name a{
+        color: @white;
+        transition: all .2s;
+        font-size: 1.3em;
+        &:hover {
+          color: @gold;
+        }
+      }
+      .item-detail {
+        color: @gold;
+        font-style: italic;
+        font-size: 1em;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+//reset shitty style
+.breadcrumb-section {
+  margin-bottom: 0
+}
+img {
+  max-width: 100%;
+}
+.frame {
+  padding: 0;
+}
