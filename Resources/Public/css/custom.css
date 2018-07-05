@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600');
+.custom-list {
+  font-family: "Rajdhani", sans-serif;
+}
+.custom-list h1 {
+  margin-bottom: 45px;
+  color: #bb9b49;
+  font-weight: 400;
+  position: relative;
+}
+.custom-list h1:after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #bb9b49;
+}
+.custom-list .custom-item {
+  margin-bottom: 20px;
+}
+.custom-list .custom-item .item-legend {
+  background: #323232;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+.custom-list .custom-item .item-legend .item-name a {
+  color: #e7e7e7;
+  transition: all .2s;
+  font-size: 1.3em;
+}
+.custom-list .custom-item .item-legend .item-name a:hover {
+  color: #bb9b49;
+}
+.custom-list .custom-item .item-legend .item-detail {
+  color: #bb9b49;
+  font-style: italic;
+  font-size: 1em;
+}
+.custom-list .custom-item .item-legend .item-detail p {
+  margin: 0;
+}
+.breadcrumb-section {
+  margin-bottom: 0;
+}
+img {
+  max-width: 100%;
+}
+.frame {
+  padding: 0;
+}
