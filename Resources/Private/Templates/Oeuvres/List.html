@@ -25,12 +25,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
         <div class="col-md-6">
           <div class="custom-item">
 
-            <div class="oeuvre-picture">
-              <f:link.action action="show" arguments="{oeuvres : oeuvre}">
-                <!-- <f:image maxWidth=1000 image="{oeuvre.image}" treatIdAsReference=1/> -->
-                <img src="http://www.laboiteverte.fr/wp-content/uploads/2012/05/EdvardMunch-TheScream-1893.jpg" alt="">
-              </f:link.action>
-            </div>
+            <f:link.action action="show" arguments="{oeuvres : oeuvre}">
+              <div class="oeuvre-picture" style="background-image:url('http://www.laboiteverte.fr/wp-content/uploads/2012/05/EdvardMunch-TheScream-1893.jpg')">
+              </div>
+            </f:link.action>
 
             <div class="item-legend">
               <div class="item-name">
@@ -41,7 +39,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
               </div>
             </div>
 
-          </div>
         </div>
 
 	  </f:for>

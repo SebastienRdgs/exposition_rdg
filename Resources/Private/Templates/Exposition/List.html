@@ -13,34 +13,62 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<!-- <h1>Listing for Exposition</h1> -->
-
 <f:flashMessages />
 
 
-<f:widget.paginate objects="{expositions}" as="paginatedExpositions" configuration="{itemsPerPage: settings.limitPagination}">
-	<f:for each="{paginatedExpositions}" as="exposition">
-		<div class="row">
-			<div class="col-sm-6 p-3">
-				<f:image maxWidth=300 image="{exposition.visuel}" treatIdAsReference=1/>
-			</div>
-			<div class="col-sm-6">
-				<h1><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.nom}</f:link.action></h1>
-				<p>{exposition.description}</p>
-				
-				<p>Ouvert du {exposition.datedeb -> f:format.date(format: 'd / m / Y')}
-					au {exposition.datefin -> f:format.date(format: 'd / m / Y')}
-				</p>
-				<h3 style="margin-top:1em">Horaire</h3>
-				<p>{exposition.horaire}</p>
-				<h3>Tarifs</h3>
-				<p>{exposition.tarifs}</p>
+<div class="smae">
+	<h1>Découvrez les expositions</h1>
+	<f:widget.paginate objects="{expositions}" as="paginatedExpositions" configuration="{itemsPerPage: settings.limitPagination}">
+		<f:for each="{paginatedExpositions}" as="exposition">
+			<div class="row">
 
-				<h3></h3>
+			<div class="col-md-12">
+				<div class="expo-item">
+
+				<f:link.action action="show" arguments="{exposition : exposition}">
+				<div class="expo-visual" style="background-image:url('http://s1.lprs1.fr/images/2016/10/21/6235920_chtchoukine_1000x625.jpg')">
+				</div>
+				</f:link.action>
+
+				<div class="expo-infos">
+				<f:link.action action="show" arguments="{exposition : exposition}">
+				<div class="expo-name">
+						{exposition.nom}
+				</div>
+				</f:link.action>
+				<div class="expo-description">
+					<div>
+					<span>Dates : </span>
+					<div>du {exposition.datedeb -> f:format.date(format: 'd/m/Y')}
+						au {exposition.datefin -> f:format.date(format: 'd/m/Y')}</div>
+					</div>
+					<div>
+					<span>Horaires : </span>
+					<div> {exposition.horaire -> f:format.nl2br() -> f:format.raw()}</div>
+					</div>
+					<div>
+					<span>Tarifs : </span>
+					<div>{exposition.tarifs -> f:format.nl2br() -> f:format.raw()}</div>
+					</div>
+
+					<f:link.action action="show" arguments="{exposition : exposition}">
+					<div class="btn btn-info">Voir les détails</div>
+					</f:link.action>
+
+
+				</div>
+				</div>
+
+
+
+				</div>
 			</div>
-		</div>
-	</f:for>
-</f:widget.paginate>
+
+
+			</div>
+		</f:for>
+	</f:widget.paginate>
+</div>
 
 </f:section>
 </html>
