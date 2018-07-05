@@ -57,6 +57,17 @@
 							</config>
 						</TCEforms>
 					</settings.limitHighlight>
+					<settings.limitPagination>
+						<TCEforms>
+							<label>Limit Pagination</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<eval>num</eval>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</settings.limitPagination>
 				</el>
 			</ROOT>
 		</sDEF>

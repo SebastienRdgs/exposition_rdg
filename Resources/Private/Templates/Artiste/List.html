@@ -21,7 +21,9 @@ page.IncludeCSS = Ext.Path_to_css_file.css
     <div class="custom-list">
       <h1>Découvrez les artistes</h1>
       <div class="row">
-        <f:for each="{artistes}" as="artiste">
+
+<f:widget.paginate objects="{artistes}" as="paginatedartistes" configuration="{itemsPerPage: settings.limitPagination}">
+    <f:for each="{paginatedartistes}" as="artiste">
 
           <div class="col-md-6">
             <div class="custom-item">
@@ -35,15 +37,18 @@ page.IncludeCSS = Ext.Path_to_css_file.css
                 <div class="item-name">
                   <f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action>
                 </div>
-                <div class="item-detail">
-                   {artiste.influences -> f:format.raw()}
+                <div class="item-legend">
+                  <div class="item-name">
+                    <f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action>
+                  </div>
+                  <div class="item-detail">
+                    {artiste.influences -> f:format.raw()}
+                  </div>
                 </div>
               </div>
-
             </div>
-          </div>
-
-        </f:for>
+          </f:for>
+        </f:widget.paginate>
       </div>
     </div>
   </div>

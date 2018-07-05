@@ -35,7 +35,7 @@ class ExpositionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      */
     public function listAction()
     {
-        $expositions = $this->expositionRepository->findAll();
+        $expositions = $this->expositionRepository->findLatest();
         $this->view->assign('expositions', $expositions);
     }
 

@@ -20,4 +20,22 @@ namespace RDG\ExpositionRdg\Domain\Repository;
  */
 class ExpositionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    public function findLatest()
+    {
+        $query = $this->createQuery();
+
+        $query->setOrderings(
+            [
+                'datedeb' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+            ]
+        );
+
+        $query->matching(
+            $query->greaterThanOrEqual(
+                'datefin',
+                (new \DateTime())->setTime(0,0,0) 
+            ) 
+        );
+        return $query->execute();
     }
+}

@@ -19,7 +19,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
   <div class="custom-list">
     <h1>Découvrez les oeuvres</h1>
     <div class="row">
-      <f:for each="{oeuvres}" as="oeuvre">
+		<f:widget.paginate objects="{oeuvres}" as="paginatedoeuvres" configuration="{itemsPerPage: settings.limitPagination}">
+      <f:for each="{paginatedoeuvres}" as="oeuvre">
 
         <div class="col-md-6">
           <div class="custom-item">
@@ -40,7 +41,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
           </div>
         </div>
         </f:for>
-      </div>
+	  </f:widget.paginate>
     </div>
   </div>
 </div>
