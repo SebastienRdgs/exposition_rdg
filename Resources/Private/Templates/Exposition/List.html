@@ -17,53 +17,30 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:flashMessages />
 
-<!-- <table  class="tx_expositionrdg" >
-	<tr>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.nom" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.horaire" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.description" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.visuel" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.tarifs" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.datedeb" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_exposition.datefin" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
 
-	<f:for each="{expositions}" as="exposition">
-		<tr>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.nom}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.horaire}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.description}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.visuel.originalResource.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.tarifs}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.datedeb -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.datefin -> f:format.date()}</f:link.action></td>
-		</tr>
+<f:widget.paginate objects="{expositions}" as="paginatedExpositions" configuration="{itemsPerPage: settings.limitPagination}">
+	<f:for each="{paginatedExpositions}" as="exposition">
+		<div class="row">
+			<div class="col-sm-6 p-3">
+				<f:image maxWidth=300 image="{exposition.visuel}" treatIdAsReference=1/>
+			</div>
+			<div class="col-sm-6">
+				<h1><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.nom}</f:link.action></h1>
+				<p>{exposition.description}</p>
+				
+				<p>Ouvert du {exposition.datedeb -> f:format.date(format: 'd / m / Y')}
+					au {exposition.datefin -> f:format.date(format: 'd / m / Y')}
+				</p>
+				<h3 style="margin-top:1em">Horaire</h3>
+				<p>{exposition.horaire}</p>
+				<h3>Tarifs</h3>
+				<p>{exposition.tarifs}</p>
+
+				<h3></h3>
+			</div>
+		</div>
 	</f:for>
-</table> -->
-
-<f:for each="{expositions}" as="exposition">
-	<div class="row">
-		<div class="col-sm-6 p-3">
-			<f:image maxWidth=300 image="{exposition.visuel}" treatIdAsReference=1/>
-		</div>
-		<div class="col-sm-6">
-			<h1><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.nom}</f:link.action></h1>
-			<p>{exposition.description}</p>
-			
-			<p>Ouvert du {exposition.datedeb -> f:format.date(format: 'd / m / Y')}
-				au {exposition.datefin -> f:format.date(format: 'd / m / Y')}
-			</p>
-			<h3 style="margin-top:1em">Horaire</h3>
-			<p>{exposition.horaire}</p>
-			<h3>Tarifs</h3>
-			<p>{exposition.tarifs}</p>
-
-			<h3></h3>
-		</div>
-	</div>
-</f:for>
+</f:widget.paginate>
 
 </f:section>
 </html>
