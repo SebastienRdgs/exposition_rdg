@@ -24,19 +24,21 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.description" /></th>
 		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.type" /></th>
 		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.dimensions" /></th>
+		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.image" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
 
-	<f:for each="{oeuvress}" as="oeuvres">
+	<f:for each="{oeuvres}" as="oeuvre">
 		<tr>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.intitule}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.date -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.description}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.type}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.dimensions}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{oeuvres : oeuvres}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{oeuvres : oeuvres}">Delete</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.intitule}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.date -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.description}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.type}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.dimensions}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{oeuvre : oeuvre}"> {oeuvre.image.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{oeuvre : oeuvre}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{oeuvre : oeuvre}">Delete</f:link.action></td>
 		</tr>
 	</f:for>
 </table>

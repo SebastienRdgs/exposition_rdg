@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-		'searchFields' => 'intitule,date,description,type,dimensions',
+		'searchFields' => 'intitule,date,description,type,dimensions,image',
         'iconfile' => 'EXT:exposition_rdg/Resources/Public/Icons/tx_expositionrdg_domain_model_oeuvres.gif'
     ],
     'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, intitule, date, description, type, dimensions',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, intitule, date, description, type, dimensions, image',
     ],
     'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, intitule, date, description, type, dimensions, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, intitule, date, description, type, dimensions, image, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		'sys_language_uid' => [
@@ -159,6 +159,52 @@ return [
 			    'size' => 30,
 			    'eval' => 'trim'
 			],
+	    ],
+	    'image' => [
+	        'exclude' => true,
+	        'label' => 'LLL:EXT:exposition_rdg/Resources/Private/Language/locallang_db.xlf:tx_expositionrdg_domain_model_oeuvres.image',
+	        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+			    'image',
+			    [
+			        'appearance' => [
+			            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+			        ],
+			        'foreign_types' => [
+			            '0' => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ],
+			            \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+			                'showitem' => '
+			                --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+			                --palette--;;filePalette'
+			            ]
+			        ],
+			        'maxitems' => 1
+			    ],
+			    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+			),
 	    ],
         'artiste' => [
             'config' => [
