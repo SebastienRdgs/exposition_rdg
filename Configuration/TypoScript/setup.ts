@@ -9,7 +9,7 @@ plugin.tx_expositionrdg_p1 {
     layoutRootPaths.1 = {$plugin.tx_expositionrdg_p1.view.layoutRootPath}
   }
   persistence {
-    storagePid = {$plugin.tx_expositionrdg_p1.persistence.storagePid}
+    storagePid >
     #recursive = 1
   }
   features {
