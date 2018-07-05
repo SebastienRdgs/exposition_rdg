@@ -20,4 +20,17 @@ namespace RDG\ExpositionRdg\Domain\Repository;
  */
 class OeuvresRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+  public function findAll() {
+    return $this->createQuery()->execute();
+  }
+  public function findHighlight() {
+    $query = $this->createQuery();
+    $query->setOrderings(
+        [
+            'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+        ]
+    );
+    $query->setLimit(3);
+    return $query->execute();
+  }
+}
