@@ -25,7 +25,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
           <div class="custom-item">
 
             <f:link.action action="show" arguments="{oeuvres : oeuvre}">
-              <div class="oeuvre-picture" style="background-image:url('http://www.laboiteverte.fr/wp-content/uploads/2012/05/EdvardMunch-TheScream-1893.jpg')">
+              <div class="oeuvre-picture" style="background-image:url('{f:uri.image(src: oeuvre.image.originalResource.publicUrl)}')">
               </div>
             </f:link.action>
 
@@ -37,10 +37,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
                  {oeuvre.type -> f:format.raw()}
               </div>
             </div>
-
+          </div>
         </div>
-
-      </f:for>
+        </f:for>
+      </div>
     </div>
   </div>
 </div>
