@@ -13,11 +13,54 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Single View for Exposition</h1>
 
 <f:flashMessages />
-<f:render partial="Exposition/Properties" arguments="{exposition:exposition}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New Exposition</f:link.action>
+
+<div class="smae">
+  <div class="item-single expo-single">
+
+        <h1>{exposition.nom}</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="item-picture">
+              <!-- <f:image maxWidth=500 image="{exposition.visuel}" treatIdAsReference=1/> -->
+              <img src="http://s1.lprs1.fr/images/2016/10/21/6235920_chtchoukine_1000x625.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="item-legend">
+              <!-- Artist birth and death dates -->
+              <div class="item-metas">
+                <div>
+                  <span>Dates : </span>
+                  <div>du {exposition.datedeb -> f:format.date(format: 'd/m/Y')}
+                    au {exposition.datefin -> f:format.date(format: 'd/m/Y')}</div>
+                </div>
+                <div>
+                  <span>Horaires : </span>
+                  <div> {exposition.horaire -> f:format.nl2br() -> f:format.raw()}</div>
+                </div>
+                <div>
+                  <span>Tarifs : </span>
+                  <div>{exposition.tarifs -> f:format.nl2br() -> f:format.raw()}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="item-description">
+              <span>Détails :</span>
+              {exposition.description -> f:format.raw()}
+            </div>
+          </div>
+        </div>
+  </div>
+
+    <f:link.action action="list" class="btn btn-info">Retour aux expositions</f:link.action>
+
+</div>
+
 </f:section>
 </html>

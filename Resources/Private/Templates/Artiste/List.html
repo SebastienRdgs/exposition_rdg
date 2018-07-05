@@ -26,12 +26,10 @@ page.IncludeCSS = Ext.Path_to_css_file.css
           <div class="col-md-6">
             <div class="custom-item">
 
-              <div class="artist-picture">
                 <f:link.action action="show" arguments="{artiste : artiste}">
-                  <!-- <f:image maxWidth=500 image="{artiste.photo}" treatIdAsReference=1/> -->
-                  <img src="https://www.biography.com/.image/t_share/MTE1ODA0OTcxODExNDQwMTQx/vincent-van-gogh-9515695-3-402.jpg" alt="">
+                  <div class="artist-picture" style="background-image:url('https://www.biography.com/.image/t_share/MTE1ODA0OTcxODExNDQwMTQx/vincent-van-gogh-9515695-3-402.jpg')">
+                  </div>
                 </f:link.action>
-              </div>
 
               <div class="item-legend">
                 <div class="item-name">

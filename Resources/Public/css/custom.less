@@ -8,13 +8,7 @@
 @gold: #bb9b49;
 @white: #e7e7e7;
 
-//site style
-
-//custom style
-body {
-
-}
-//artist list
+//COMMON
 .smae {
   font-family: "Rajdhani", sans-serif;
 
@@ -32,10 +26,28 @@ body {
       background: @gold;
     }
   }
+  .btn-info {
+    border: none;
+    background: @gold;
+    transition: all .2s;
+    &:hover {
+      background: darken(@gold, 10%);
+    }
+  }
 }
+
+//ARTIST AND OEUVRES
 .custom-list {
   .custom-item {
     margin-bottom: 20px;
+
+    .oeuvre-picture, .artist-picture {
+      min-height: 350px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
     .item-legend {
       background: @bg-lighter;
       display: flex;
@@ -88,6 +100,55 @@ body {
     padding: 12px;
     border: 5px solid @gold;
   }
+
+  &.expo-single {
+    .item-description {
+      span {
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: @gold;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+//EXPO
+.expo-item {
+  margin-bottom: 25px;
+  display: flex;
+  border: 5px  solid @gold;
+  .expo-visual {
+    width: 30%;
+    min-width: 280px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .expo-infos {
+    margin-left: 10px;
+    padding: 20px;
+    .expo-name {
+      color: @gold;
+      font-size: 1.5em;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .expo-description {
+      & > div {
+        span {
+          font-size: 1.1em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .btn-info {
+    margin-top: 20px;
+  }
+
 }
 
 //reset shitty style
