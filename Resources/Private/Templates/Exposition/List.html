@@ -46,10 +46,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:for each="{expositions}" as="exposition">
 	<div class="row">
 		<div class="col-sm-6 p-3">
-			<img style="max-width: 100%" src="/typo3_src-7.6.28/fileadmin/user_upload/{exposition.visuel.originalResource.name}">
+			<f:image maxWidth=300 image="{exposition.visuel}" treatIdAsReference=1/>
 		</div>
 		<div class="col-sm-6">
-			<h1>{exposition.nom}</h1>
+			<h1><f:link.action action="show" arguments="{exposition : exposition}"> {exposition.nom}</f:link.action></h1>
 			<p>{exposition.description}</p>
 			
 			<p>Ouvert du {exposition.datedeb -> f:format.date(format: 'd / m / Y')}

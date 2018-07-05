@@ -15,40 +15,49 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:flashMessages />
 
 <f:section name="main">
-  <div class="artist-single">
 
-    <h1>{artiste.nom}</h1>
+<div class="smae">
+  <div class="item-single">
 
-    <div class="row">
-      <div class="col-md-5">
-        <div class="artist-picture">
-          <!-- <f:image maxWidth=500 image="{artiste.photo}" treatIdAsReference=1/> -->
-          <img src="https://www.biography.com/.image/t_share/MTE1ODA0OTcxODExNDQwMTQx/vincent-van-gogh-9515695-3-402.jpg" alt="">
-        </div>
-      </div>
-      <div class="col-md-7">
-        <div class="artist-legend">
-          <!-- Artist birth and death dates -->
-          <div class="artist-dates">
-            <div>
-              Né le : <f:format.date format="d.m.Y">{artiste.dateNaissance}</f:format.date>
+        <h1>{artiste.nom}</h1>
+
+        <div class="row">
+          <div class="col-md-5">
+            <div class="item-picture">
+              <!-- <f:image maxWidth=500 image="{artiste.photo}" treatIdAsReference=1/> -->
+              <img src="https://www.biography.com/.image/t_share/MTE1ODA0OTcxODExNDQwMTQx/vincent-van-gogh-9515695-3-402.jpg" alt="">
             </div>
-            <!-- Check if artist has a death date -->
-            <f:if condition="{artiste.dateDeces}">
+          </div>
+          <div class="col-md-7">
+            <div class="item-legend">
+              <!-- Artist birth and death dates -->
+              <div class="item-metas">
                 <div>
-                  Mort le : <f:format.date format="d.m.Y">{artiste.dateDeces}</f:format.date>
+                  <span>Né le : </span><f:format.date format="d.m.Y">{artiste.dateNaissance}</f:format.date>
                 </div>
-            </f:if>
-          </div>
+                <!-- Check if artist has a death date -->
+                <f:if condition="{artiste.dateDeces}">
+                    <div>
+                     <span> Mort le : </span><f:format.date format="d.m.Y">{artiste.dateDeces}</f:format.date>
+                    </div>
+                </f:if>
+              </div>
 
-          <div class="artist-bio">
-            {artiste.biographie -> f:format.raw()}
-          </div>
+              <div class="item-description artist-bio">
+                <span>Biographie :</span>
+                {artiste.biographie -> f:format.raw()}
+              </div>
 
-        <f:link.action action="list">Retour aux artistes</f:link.action><br />
-      </div>
-      </div>
-    </div>
+          </div>
+          </div>
+        </div>
+  </div>
+
+    <f:link.action action="list" class="btn btn-info">Retour aux artistes</f:link.action>
+
+</div>
+
+
 
 
 </f:section>

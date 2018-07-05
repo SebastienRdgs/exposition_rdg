@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600');
-.custom-list {
+.smae {
   font-family: "Rajdhani", sans-serif;
 }
-.custom-list h1 {
+.smae h1 {
   margin-bottom: 45px;
   color: #bb9b49;
   font-weight: 400;
   position: relative;
 }
-.custom-list h1:after {
+.smae h1:after {
   content: "";
   position: relative;
   display: block;
@@ -41,6 +41,29 @@
 }
 .custom-list .custom-item .item-legend .item-detail p {
   margin: 0;
+}
+.item-single {
+  margin-bottom: 60px;
+}
+.item-single .item-legend .item-metas {
+  font-size: 1.2em;
+}
+.item-single .item-legend .item-metas span {
+  font-weight: 600;
+}
+.item-single .item-legend .item-description.artist-bio {
+  margin-top: 20px;
+}
+.item-single .item-legend .item-description span {
+  font-weight: 600;
+  color: #bb9b49;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.item-single .single-oeuvre-picture {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 5px solid #bb9b49;
 }
 .breadcrumb-section {
   margin-bottom: 0;

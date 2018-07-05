@@ -13,11 +13,44 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Single View for Oeuvres</h1>
+
+<div class="smae">
+  <div class="item-single">
+
+        <h1>{oeuvres.intitule}</h1>
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="single-oeuvre-picture">
+              <!-- <f:image maxWidth=500 image="{artiste.photo}" treatIdAsReference=1/> -->
+              <img src="http://www.laboiteverte.fr/wp-content/uploads/2012/05/EdvardMunch-TheScream-1893.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="item-legend">
+              <div class="item-metas">
+                <div>
+                  <span>Créé en : </span><f:format.date format="Y">{oeuvres.date}</f:format.date>
+                </div>
+                <div>
+                    <span>Dimensions :</span> {oeuvres.dimensions}
+                </div>
+              </div>
+
+              <div class="item-description">
+                  <span>Description :</span>
+                  {oeuvres.description -> f:format.raw()}
+              </div>
+
+          </div>
+          </div>
+        </div>
+  </div>
+
+    <f:link.action action="list" class="btn btn-info">Retour aux oeuvres</f:link.action>
+
+</div>
 
 <f:flashMessages />
-<f:render partial="Oeuvres/Properties" arguments="{oeuvres:oeuvres}" />
-<f:link.action action="list">Back to list</f:link.action><br />
-<f:link.action action="new">New Oeuvres</f:link.action>
 </f:section>
 </html>
