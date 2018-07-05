@@ -20,44 +20,53 @@ namespace RDG\ExpositionRdg\Domain\Model;
  */
 class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
+    const TYPE_PEINTURE_AQUARELLE = 1;
+    const TYPE_PEINTURE_HUILE = 2;
+    const TYPE_PEINTURE_ENCRE = 3;
+    const TYPE_GRAVURE = 4;
+    const TYPE_DESSIN = 5;
+    const TYPE_SCULPTURE = 6;
+    const TYPE_PHOTO = 7;
+    const TYPE_STREET_ART = 8;
+
     /**
      * L'intitulé
-     * 
+     *
      * @var string
      */
     protected $intitule = '';
 
     /**
      * date
-     * 
+     *
      * @var \DateTime
      */
     protected $date = null;
 
     /**
      * description
-     * 
+     *
      * @var string
      */
     protected $description = '';
 
     /**
      * type
-     * 
+     *
      * @var int
      */
     protected $type = 0;
 
     /**
      * dimensions
-     * 
+     *
      * @var string
      */
     protected $dimensions = '';
 
     /**
      * image
-     * 
+     *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      * @cascade remove
      */
@@ -65,7 +74,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the intitule
-     * 
+     *
      * @return string $intitule
      */
     public function getIntitule()
@@ -75,7 +84,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the intitule
-     * 
+     *
      * @param string $intitule
      * @return void
      */
@@ -86,7 +95,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the date
-     * 
+     *
      * @return \DateTime $date
      */
     public function getDate()
@@ -96,7 +105,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the date
-     * 
+     *
      * @param \DateTime $date
      * @return void
      */
@@ -107,7 +116,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the description
-     * 
+     *
      * @return string $description
      */
     public function getDescription()
@@ -117,7 +126,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the description
-     * 
+     *
      * @param string $description
      * @return void
      */
@@ -128,7 +137,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the type
-     * 
+     *
      * @return int $type
      */
     public function getType()
@@ -138,7 +147,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the type
-     * 
+     *
      * @param int $type
      * @return void
      */
@@ -149,7 +158,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the dimensions
-     * 
+     *
      * @return string $dimensions
      */
     public function getDimensions()
@@ -159,7 +168,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the dimensions
-     * 
+     *
      * @param string $dimensions
      * @return void
      */
@@ -170,7 +179,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Returns the image
-     * 
+     *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
      */
     public function getImage()
@@ -180,7 +189,7 @@ class Oeuvres extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the image
-     * 
+     *
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
      * @return void
      */
