@@ -16,10 +16,8 @@ body {
 }
 //artist list
 .smae {
-
-}
-.custom-list {
   font-family: "Rajdhani", sans-serif;
+
   h1 {
     margin-bottom: 45px;
     color: @gold;
@@ -34,8 +32,10 @@ body {
       background: @gold;
     }
   }
+}
+.custom-list {
   .custom-item {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
     .item-legend {
       background: @bg-lighter;
       display: flex;
@@ -62,9 +62,37 @@ body {
   }
 }
 
+.item-single {
+  margin-bottom: 60px;
+  .item-legend {
+    .item-metas {
+      font-size: 1.2em;
+      span {
+        font-weight: 600;
+      }
+    }
+    .item-description {
+      &.artist-bio {
+        margin-top: 20px;
+      }
+      span {
+        font-weight: 600;
+        color: @gold;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .single-oeuvre-picture {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 5px solid @gold;
+  }
+}
+
 //reset shitty style
 .breadcrumb-section {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 img {
   max-width: 100%;

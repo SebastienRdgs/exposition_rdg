@@ -13,36 +13,39 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Oeuvres</h1>
 
 <f:flashMessages />
+<div class="smae">
+  <div class="custom-list">
+    <h1>Découvrez les oeuvres</h1>
+    <div class="row">
+      <f:for each="{oeuvres}" as="oeuvre">
 
-<table  class="tx_expositionrdg" >
-	<tr>
-		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.intitule" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.date" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.description" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.type" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.dimensions" /></th>
-		<th><f:translate key="tx_expositionrdg_domain_model_oeuvres.image" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
+        <div class="col-md-6">
+          <div class="custom-item">
 
-	<f:for each="{oeuvres}" as="oeuvres">
-		<tr>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.intitule}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.date -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.description}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.type}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.dimensions}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{oeuvres : oeuvres}"> {oeuvres.image.originalResource.name}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{oeuvres : oeuvres}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{oeuvres : oeuvres}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
+            <div class="oeuvre-picture">
+              <f:link.action action="show" arguments="{oeuvres : oeuvre}">
+                <!-- <f:image maxWidth=1000 image="{oeuvre.image}" treatIdAsReference=1/> -->
+                <img src="http://www.laboiteverte.fr/wp-content/uploads/2012/05/EdvardMunch-TheScream-1893.jpg" alt="">
+              </f:link.action>
+            </div>
 
-<f:link.action action="new">New Oeuvres</f:link.action>
+            <div class="item-legend">
+              <div class="item-name">
+                <f:link.action action="show" arguments="{oeuvres : oeuvre}"> {oeuvre.intitule}</f:link.action>
+              </div>
+              <div class="item-detail">
+                 {oeuvre.type -> f:format.raw()}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </f:for>
+    </div>
+  </div>
+</div>
 </f:section>
 </html>
