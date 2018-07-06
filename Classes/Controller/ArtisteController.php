@@ -53,10 +53,16 @@ class ArtisteController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action search
      * 
+     * @param \RDG\ExpositionRdg\Controller\MVC\ArtisteSearch $artisteSearch
      * @return void
      */
-    public function searchAction()
+    public function searchAction(\RDG\ExpositionRdg\Controller\MVC\ArtisteSearch $artisteSearch)
     {
-
+        if ($artisteSearch != null) {
+            $artistes = $this->artisteRepository->findByNom($artisteSearch);
+        }else{
+            $artistes = $this->artisteRepository->findAll();
+        }
+        $this->view->assign('artistes', $artistes);
     }
 }

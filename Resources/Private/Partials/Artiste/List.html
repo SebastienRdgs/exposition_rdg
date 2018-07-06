@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:form action="search" name="artisteSearch" object="{artisteSearch}">
+  <f:form.textbox property="keyword">
+  <f:form.submit value="Search" />
+</f:form>
+<h1>Notre sélection d'artistes</h1>
+
+<f:flashMessages />
+
+<div class="artist-list">
+  <f:for each="{artistes}" as="artiste">
+
+    <div class="artist-item">
+
+      <div class="artist-picture">
+        <f:link.action action="show" arguments="{artiste : artiste}">
+          <!-- <f:image maxWidth=500 image="{artiste.photo}" treatIdAsReference=1/> -->
+          <img src="" alt="">
+        </f:link.action>
+      </div>
+
+      <div class="artist-head">
+        <div class="artist-name">
+          <f:link.action action="show" arguments="{artiste : artiste}"> {artiste.nom}</f:link.action>
+        </div>
+        <div class="artist-influence">
+           {artiste.influences -> f:format.raw()}
+        </div>
+      </div>
+
+      <div class="artist-legend">
+        <!-- Artist birth and death dates -->
+        <div class="artist-dates">
+          <div>
+            Né le : <f:format.date format="d.m.Y">{artiste.dateNaissance}</f:format.date>
+          </div>
+          <!-- Check if artist has a death date -->
+          <f:if condition="{artiste.dateDeces}">
+              <div>
+                Mort le : <f:format.date format="d.m.Y">{artiste.dateDeces}</f:format.date>
+              </div>
+          </f:if>
+        </div>
+
+        <div class="artist-bio">
+          {artiste.biographie -> f:format.raw()}
+        </div>
+      </div>
+
+    </div>
+
+  </f:for>
+</div>
+</html>

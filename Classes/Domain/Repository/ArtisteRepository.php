@@ -20,4 +20,19 @@ namespace RDG\ExpositionRdg\Domain\Repository;
  */
 class ArtisteRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+	/**
+	 * Gets events following by request
+	 *
+	 *
+	 * @param string $request
+	 * @return object
+	 */
+
+	public function findByNom($request = NULL){
+	    $query = $this->createQuery();
+	    if($request) {
+	        $result =  $query->matching($query->like('nom', '%'.$request.'%'))->execute();
+	    }
+	    return $result;
+	}
     }

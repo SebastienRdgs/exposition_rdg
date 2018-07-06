@@ -15,6 +15,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 page.IncludeCSS = Ext.Path_to_css_file.css
 
 <f:section name="main">
+<f:form action="search" name="artisteSearch" object="{artisteSearch}">
+  <f:form.textfield property="keyword" />
+  <f:form.submit value="Search" />
+</f:form>
   <f:flashMessages />
 
   <div class="smae">
